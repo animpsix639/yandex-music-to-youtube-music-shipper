@@ -42,6 +42,10 @@ def shipIt(ytmusic, data, i):
 
 
 if __name__ == '__main__':
+    if 'yandex_token' not in os.listdir() :
+        open('yandex_token', 'wb') 
+    if 'data' not in os.listdir():
+        open('data', 'wb')
     if os.stat('data').st_size == 0:
         main_yandex()
     token = pickle.load(open('yandex_token', 'rb'))[0]
