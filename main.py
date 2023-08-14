@@ -4,7 +4,7 @@ from Levenshtein import distance
 from tqdm import tqdm
 from colorama import Fore, Style
 import os
-from parse import get_yandex
+from parse import main_yandex
 
 def shipIt(ytmusic, data, i):
     errs = {'maybe_broken': [], 'broken': []}
@@ -42,9 +42,9 @@ def shipIt(ytmusic, data, i):
 
 
 if __name__ == '__main__':
-    token = pickle.load(open('yandex_token', 'rb'))[0]
     if os.stat('data').st_size == 0:
-        get_yandex(token)
+        main_yandex()
+    token = pickle.load(open('yandex_token', 'rb'))[0]
     errs = shipIt(YTMusic('oauth.json'), pickle.load(open('data', 'rb')), pickle.load(open('yandex_token', 'rb'))[1])
     if errs['maybe_broken']:
         print(Fore.YELLOW + 'These tracks weren\'t added due to a problem with different platform names')
