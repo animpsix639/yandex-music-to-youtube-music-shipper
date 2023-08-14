@@ -13,4 +13,5 @@ Then copy ALL info in brackets (it will be like: `{"access_token":"639639639 ...
 
 ## Usage
  `python ./main.py`
+ 
  If you want to change the token or reload tracks from Yandex Music then run: `python ./parse.py`
