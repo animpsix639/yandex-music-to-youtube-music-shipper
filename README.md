@@ -12,5 +12,5 @@ Then copy ALL info in brackets (it will be like: `{"access_token":"639639639 ...
 (`oauth.json` file must be in the same directory as `main.py` and `parse.py`)
 
 # Usage
-### `python ./main.py` 
-### If you want to change the token or reload tracks from Yandex Music then run: `python ./parse.py`
+ `python ./main.py`
+ If you want to change the token or reload tracks from Yandex Music then run: `python ./parse.py`
